@@ -1,0 +1,9 @@
+@import "config", "variables", "mixin";
+@import "block1";
+
+button[main-btn] {
+    background-color: map-get($colors, 'primary');
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
