@@ -43,12 +43,12 @@ export class MobileMenu {
             } else {
                 menu.classList.remove('open');
 
-                curtains.style.top = `${-curtains.offsetHeight}px`;
                 menu.style.top = `${closeY}px`;
         
                 setTimeout( () => {
                     header.classList.remove('open');
-                }, 110)
+                    curtains.style.top = `${-curtains.offsetHeight}px`;
+                }, 450)
 
                 this.checker = false;
             }

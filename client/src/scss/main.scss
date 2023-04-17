@@ -44,4 +44,9 @@ button[wave] {
 a {
     color: #000;
     text-decoration: none;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+        color: map-get($colors, "link-hover" );
+    }
 }
