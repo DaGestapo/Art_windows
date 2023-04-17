@@ -1,16 +1,29 @@
 @import "variables", "config", "mixin";
 @import "mobile_menu";
-@import "block1";
+@import "block1", "block2";
 
-button[main-btn] {
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+a[main-btn] {
     background-color: map-get($colors, 'primary');
     border: none;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 1%;
     color: #fff;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
-button[wave] {
+a[wave] {
     position: relative;
     overflow: hidden;
 
@@ -45,8 +58,4 @@ a {
     color: #000;
     text-decoration: none;
     transition: all 0.1s ease-out;
-
-    &:hover {
-        color: map-get($colors, "link-hover" );
-    }
 }

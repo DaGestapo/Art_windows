@@ -9,7 +9,7 @@ export class BtnWave {
         window.addEventListener('pointerover', handler);
 
         function handler(e) {
-            const target = e.target.closest('button[wave]');
+            const target = e.target.closest('a[wave]');
             if(!target) return;
     
             const posY = e.pageY - target.getBoundingClientRect().top,
@@ -26,7 +26,7 @@ export class BtnWave {
             window.addEventListener('pointerout', pointerOut);
 
             function pointerOut(e) {
-                const target = e.target.closest('button[wave]');
+                const target = e.target.closest('a[wave]');
                 console.log(target, wave);
                 if(!target && wave) return;
 
