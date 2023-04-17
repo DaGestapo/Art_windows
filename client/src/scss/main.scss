@@ -1,6 +1,6 @@
 @import "variables", "config", "mixin";
 @import "mobile_menu";
-@import "block1", "block2", "block3";
+@import "block1", "block2", "block3", "block4";
 
 body {
     display: flex;
@@ -12,6 +12,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+h2[section] {
+    font-size: 27px;
+    font-weight: 400;
+    text-align: center;
+    color: map-get($colors, "text-second");
+
+    span {
+        color: map-get($colors, "primary" )
+    }
 }
 
 button {
@@ -26,6 +37,19 @@ input {
     padding: 1rem;
 }
 
+div[img] {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
 a[main-btn] {
     background-color: map-get($colors, 'primary');
     border: none;
@@ -36,6 +60,8 @@ a[main-btn] {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
+
+
 
 a[wave] {
     position: relative;
