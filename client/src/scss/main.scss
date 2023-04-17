@@ -1,6 +1,6 @@
 @import "variables", "config", "mixin";
 @import "mobile_menu";
-@import "block1", "block2";
+@import "block1", "block2", "block3";
 
 body {
     display: flex;
@@ -8,8 +8,22 @@ body {
     gap: 4rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 button {
+    border: none;
+    padding: 1rem;
     cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 1rem;
 }
 
 a[main-btn] {

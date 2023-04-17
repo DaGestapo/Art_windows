@@ -12,8 +12,8 @@ export class BtnWave {
             const target = e.target.closest('a[wave]');
             if(!target) return;
     
-            const posY = e.pageY - target.getBoundingClientRect().top,
-                posX = e.pageX - target.getBoundingClientRect().left;
+            const posY = e.clientY - target.getBoundingClientRect().top,
+                posX = e.clientX - target.getBoundingClientRect().left;
             this.checker = false;
             const wave = createWaveEl(posX, posY, target);
 
@@ -27,7 +27,6 @@ export class BtnWave {
 
             function pointerOut(e) {
                 const target = e.target.closest('a[wave]');
-                console.log(target, wave);
                 if(!target && wave) return;
 
                 window.addEventListener('pointerover', handler);
@@ -54,8 +53,6 @@ export class BtnWave {
     getCenter(posX, posY, element) {
         const elemHalfOfWidth = element.clientWidth/2,
             elemHalfOfHeight = element.clientHeight/2;
-
-        console.log(elemHalfOfWidth, elemHalfOfWidth - posX);
 
         return {
             posX:  posX - elemHalfOfWidth,
