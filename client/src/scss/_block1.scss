@@ -10,7 +10,7 @@
     align-items: center;
     color: map-get($colors, 'second');
     padding-bottom: 2rem;
-    gap: 1rem;
+    //gap: 1rem;
     
     &::before {
         content: "";
@@ -29,6 +29,8 @@
         align-items: center;
         width: 100%;
         border-bottom: 1px solid map-get($colors, 'under-line');
+        //background: map-get($colors , "second" );
+        z-index: 20;
     }
 
     &__logo {
@@ -45,7 +47,7 @@
         height: 1.4rem;
         background: transparent;
         border: none;
-        z-index: 1;
+        transition: all 0.5s ease-in-out;
         cursor: pointer;
 
         &-item {
@@ -53,6 +55,7 @@
             width: 100%;
             height: 0.2rem;
             background-color: #000;
+            transition: all 0.2s ease-in-out;
         }
 
         &::before {
@@ -62,6 +65,7 @@
             width: 100%;
             height: 0.2rem;
             background-color: #000;
+            transition: all 0.1s ease-in-out;
         }
 
         &::after {
@@ -71,6 +75,7 @@
             width: 100%;
             height: 0.2rem;
             background-color: #000;
+            transition: all 0.3s ease-in-out;
         }
     }
 
@@ -113,6 +118,27 @@
             width: 100%;
             padding: 1rem 1%;
             font-size: 15px;
+        }
+    }
+}
+
+.open {
+    background: map-get($colors, 'second');
+    visibility: visible;
+    z-index: 10;
+
+    .block1__hamburger {
+        
+        div {
+            background: #fff;
+        }
+
+        &::before {
+            background: #fff;
+        }
+
+        &::after {
+            background: #fff;
         }
     }
 }

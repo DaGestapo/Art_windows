@@ -1,4 +1,5 @@
 @import "config", "variables", "mixin";
+@import "mobile_menu";
 @import "block1";
 
 button[main-btn] {
@@ -6,4 +7,9 @@ button[main-btn] {
     border: none;
     color: #fff;
     cursor: pointer;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
 }
