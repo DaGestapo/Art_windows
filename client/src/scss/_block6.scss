@@ -1,0 +1,70 @@
+.block6 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    section {
+        position: absolute;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        row-gap: 1rem;
+        border: 1px solid map-get($colors, "border");
+        margin: 1rem;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: relative;
+        //border: 1px solid map-get($colors, "second");
+        position: relative;
+        width: fit-content;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    h4 {
+
+        span {
+            color: map-get($colors, "primary" );
+        }
+    }
+
+    p {
+        grid-column: 1 / 2 span;
+    }
+
+    &__controlls {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
+        gap: 0.5rem;
+
+        a {
+            color: map-get($colors, "primary");
+            border: 1px solid map-get($colors, "primary");
+            padding: 1rem 2rem;
+            height: 100%;
+        }
+    }
+
+    &__btn {
+        color: map-get($colors, "primary");
+        border: 1px solid map-get($colors, "primary");
+        height: 53px;
+    }
+
+    &__slider {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 20rem;
+    }
+}

@@ -6,6 +6,7 @@ import { BtnWave } from './animations/animations_btn-wave';
 
 //Mobile
 import {MobileMenu} from './mobile/mobile_menu.js';
+import {MobileSlider} from './mobile/mobile_slider.js'
 
 
  (() => {
@@ -15,6 +16,7 @@ import {MobileMenu} from './mobile/mobile_menu.js';
    setTimeout( () => {
     new BtnWave();
     new MobileMenu();
+    new MobileSlider();
    });
 
 

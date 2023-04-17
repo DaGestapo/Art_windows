@@ -1,6 +1,6 @@
 @import "variables", "config", "mixin";
 @import "mobile_menu";
-@import "block1", "block2", "block3", "block4";
+@import "block1", "block2", "block3", "block4", "block6", "block7";
 
 body {
     display: flex;
@@ -50,6 +50,12 @@ div[img] {
     
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+}
+
 a[main-btn] {
     background-color: map-get($colors, 'primary');
     border: none;
@@ -85,6 +91,10 @@ a[wave] {
     }
 }
 
+p {
+    font-size: 17px;
+}
+
 .wave {
     position: absolute;
     background: #fff;
@@ -92,10 +102,4 @@ a[wave] {
     aspect-ratio: 1/1;
     border-radius: 50%;
     animation: wave 1s linear;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-    transition: all 0.1s ease-out;
 }
