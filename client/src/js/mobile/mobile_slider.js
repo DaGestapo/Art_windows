@@ -2,10 +2,12 @@ export class MobileSlider {
     constructor() {
         this.current = 1;
         this.controll = document.querySelector('.block6__controlls');
-        this.sliders = document.querySelectorAll('.block6__slider-item');
+        this.slides = document.querySelectorAll('.block6__slider-item');
+        this.slider = document.querySelector('.block6__slider');
 
+        this.setSliderHeight();
         this.listener();
-        this.slider();
+        this.slide();
     }
 
     listener() {
@@ -28,37 +30,48 @@ export class MobileSlider {
         controll.addEventListener('click', handler);
     }
 
-    slider() {
-        const sliders = this.sliders;
+    setSliderHeight() {
+        const slide = this.slides[0];
+        const slider = this.slider;
 
-        sliders.forEach( (item, index ) => {
+        setTimeout( () => {
+            const height = slide.getBoundingClientRect().height;
+            console.log(height);
+            slider.style.height = `${height + 20}px`;
+        }, 150)
+    }
+
+    slide() {
+        const slides = this.slides;
+
+        slides.forEach( (item, index ) => {
             item.style.transform = `translateX(${index * 110}%)`;
         });
     }
 
 
     toLeft() {
-        const sliders = this.sliders;
+        const slides = this.slides;
         this.current++;
 
         if(this.current > 1) {
             this.current = 1;
         } 
 
-        sliders.forEach( (item, index ) => {
+        slides.forEach( (item, index ) => {
             item.style.transform = `translateX(${ ((this.current + index) * 110) - 110 }%)`;
         });
     }
 
     toRight() {
-        const sliders = this.sliders;
+        const slides = this.slides;
         this.current--;
 
-        if(this.current < -sliders.length + 2) {
-            this.current = -sliders.length +2;
+        if(this.current < -slides.length + 2) {
+            this.current = -slides.length +2;
         } 
 
-        sliders.forEach( (item, index ) => {
+        slides.forEach( (item, index ) => {
             item.style.transform = `translateX(${ ((this.current + index) * 110) - 110 }%)`;
         });
     }
