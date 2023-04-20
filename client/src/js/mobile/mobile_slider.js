@@ -36,7 +36,6 @@ export class MobileSlider {
 
         setTimeout( () => {
             const height = slide.getBoundingClientRect().height;
-            console.log(height);
             slider.style.height = `${height + 20}px`;
         }, 150)
     }

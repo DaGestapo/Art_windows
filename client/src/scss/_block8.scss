@@ -1,0 +1,27 @@
+.block8 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    p {
+        font-size: 17px;
+        margin: 0 1rem;
+        line-height: 150%;
+    }
+
+    h2 {
+        margin: 2rem 0 1rem 0;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 2rem 1rem;
+        row-gap: 1rem;
+
+        h3 {
+            color: map-get($colors, "primary");
+            font-size: 30px;
+        }
+    }
+}

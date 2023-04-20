@@ -1,0 +1,50 @@
+.block7 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(
+        to top, 
+        rgb(255, 255, 255), 
+        #ffffff,
+        rgba(255, 255, 255, 0)
+    ),
+    url('../imgs/gluxie-stvorki.jpg');
+    background-repeat: no-repeat;
+    margin: 0 1rem;
+    padding-top: 4rem;
+    gap: 2rem;
+    z-index: 2;
+
+
+    h2 {
+        margin-top: 4rem;
+        z-index: 2;
+    }
+
+    h4 {
+        font-size: 20px;
+        z-index: 2;
+    }
+
+    p[main-p]{
+        text-align: center;
+        line-height: 150%;
+        z-index: 2;
+    }
+
+    section {
+        margin: 0 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+        z-index: 2;
+
+        p {
+            text-align:center;
+            color: map-get($colors, 'p-second');
+            z-index: 2;
+        }
+
+    }
+}
