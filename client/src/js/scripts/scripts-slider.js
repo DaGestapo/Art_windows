@@ -1,9 +1,9 @@
-export class MobileSlider {
-    constructor() {
+export class Slider {
+    constructor(controllerClassName, slideClassName, sliderClassName) {
         this.current = 1;
-        this.controll = document.querySelector('.block6__controlls');
-        this.slides = document.querySelectorAll('.block6__slider-item');
-        this.slider = document.querySelector('.block6__slider');
+        this.controll = document.querySelector(`.${controllerClassName}`);
+        this.slides = document.querySelectorAll(`.${slideClassName}`);
+        this.slider = document.querySelector(`.${sliderClassName}`);
 
         this.setSliderHeight();
         this.listener();

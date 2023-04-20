@@ -4,24 +4,31 @@ import "../scss/main.scss";
 // Main scripts
 import { BtnWave } from './animations/animations_btn-wave';
 
-//Mobile
+//Mobile scripts
 import {MobileMenu} from './mobile/mobile_menu.js';
-import {MobileSlider} from './mobile/mobile_slider.js'
-import {BoxIcons} from './box-icons/setAtribute-toBoxIcxons.js'
+
+//Main scripts
+import {BoxIcons} from './box-icons/setAtribute-toBoxIcxons.js';
+import {Slider} from './scripts/scripts-slider.js';
+
 
 
  (() => {
-   if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return;
 
-   // Init all classes
-   setTimeout( () => {
-    let boxicons = new BoxIcons('block7');
+    // Init all classes
+    setTimeout( () => {
+      let boxicons = new BoxIcons('block7');
       boxicons.setSize('5rem')
 
-    new BtnWave();
-    new MobileMenu();
-    new MobileSlider();
-   });
+      // Mobile Slider
+      new Slider('block6__controlls', 'block6__slider-item', 'block6__slider');
+      // Sertificats Slider
+      new Slider('sectificats__controll', 'sectificats-item', 'sectificats__slider')
+
+      new BtnWave();
+      new MobileMenu();
+    });
 
 
  })();
