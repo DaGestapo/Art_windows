@@ -1,7 +1,7 @@
 @import "variables", "config", "mixin";
 @import "mobile_menu";
 @import "block1", "block2", "block3", "block4", "block6", "block7", "block8",
-    "block9", "sectificats";
+    "block9", "block10", "sectificats", "footer";
 
 body {
     display: flex;
@@ -13,6 +13,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin:0 1rem;
 }
 
 h2[section] {
@@ -24,6 +25,10 @@ h2[section] {
     span {
         color: map-get($colors, "primary" )
     }
+}
+
+h3 {
+    font-size: 20px;
 }
 
 button {
@@ -61,7 +66,6 @@ a[main-btn] {
     background-color: map-get($colors, 'primary');
     border: none;
     text-align: center;
-    width: 100%;
     padding: 1rem 1%;
     color: #fff;
     transition: all 0.3s ease-in-out;
@@ -104,3 +108,5 @@ p {
     border-radius: 50%;
     animation: wave 1s linear;
 }
+
+@import "responsive";

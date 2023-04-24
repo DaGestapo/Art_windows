@@ -1,0 +1,31 @@
+.block10 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    gap: 2rem;
+
+    &__team {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 2rem;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin-top: 0.5rem;
+                color: map-get($colors, "second" );
+            }
+        }
+    }
+
+    &-img {
+        margin-bottom: 1rem;
+    }
+}

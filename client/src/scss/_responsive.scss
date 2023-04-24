@@ -1,0 +1,81 @@
+@include medium {
+
+    h2[section] {
+        font-size: 30px;
+    }
+
+    .block1 {
+        align-items:start;
+        padding-bottom: 5rem;
+
+        &__contacts {
+            display: flex;
+        }
+
+        &__header {
+            padding: 1rem 2rem;
+        }
+    
+    
+        h1 {
+            text-align: left;
+            font-size: 40px;
+            width: 65%;
+            font-weight: 700;
+            margin-left: 2rem;
+        }
+    
+        &__content {
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto;
+            width: 100%;
+            column-gap: 0;
+            row-gap: 1rem;
+            margin:1rem 2rem;
+            padding: 0;
+
+    
+            li {
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            h3 {
+                font-size: 32px;
+            }
+    
+            p {
+                font-size: 16px;
+            }
+    
+            a {
+                margin-top: 2rem;
+
+            }
+        }
+    }
+
+    .block2 {
+
+        &__sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 1rem;
+            gap:2rem;
+        }
+
+        button {
+            margin: 2rem 10%;
+        }
+    }
+
+    
+
+
+}
+
+@include large {
+    body {
+        background-color: black;
+    }
+}

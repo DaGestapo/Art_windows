@@ -10,7 +10,6 @@
     align-items: center;
     color: map-get($colors, 'second');
     padding-bottom: 2rem;
-    //gap: 1rem;
     
     &::before {
         content: "";
@@ -38,14 +37,40 @@
         display: inline-block;
         background-color: map-get($colors, 'second');
         left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         transition: all 0.1s ease-in-out;
+        z-index: 1;
     }
 
     &__logo {
-        width: 30%;
+        width: 7rem;
         z-index: 1;
+    }
+
+    &__contacts {
+        position: absolute;
+        display: none;
+        flex-direction: row;
+        right: 15%;
+        gap: 2rem;
+        z-index: 0;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        h5 {
+            font-size: 13px;
+            color: map-get($colors, "text-main" );
+        }
+
+        p {
+            font-size: 15px;
+        }
     }
 
     &__hamburger {
@@ -60,6 +85,7 @@
         border: none;
         transition: all 0.5s ease-in-out;
         cursor: pointer;
+        z-index: 1;
 
         &-item {
             position: relative;
@@ -94,6 +120,7 @@
         position: relative;
         text-align: center;
         font-size: 30px;
+        font-weight: 500;
         z-index: 1;
         margin: 4rem 8% 0;
     }
@@ -116,25 +143,25 @@
 
         h3 {
             font-size: 28px;
-            width: 25%;
+            font-weight: 500;
+            width: 30%;
         }
 
         p {
             font-size: 15px;
-            width: 30%;
+            width: 25%;
         }
+    }
 
-        button {
-            margin-top: 1rem;
-            width: 100%;
-            padding: 1rem 1%;
-            font-size: 15px;
-        }
+    a {
+        margin: 1rem;
+        width: 90%;
+        padding: 1rem 1%;
+        font-size: 15px;
     }
 }
 
 .open {
-    //background: map-get($colors, 'second');
     visibility: visible;
 
     .block1__hamburger {

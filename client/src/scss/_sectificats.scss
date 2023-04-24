@@ -4,14 +4,12 @@
     align-items: center;
     gap: 2rem;
 
-    h2 {
-        margin-left: 1rem;
-    }
 
     &__slider {
         position: relative;
         grid-column: 1 / span 2;
         transition: all 0.3s ease-in-out;
+        overflow: hidden;
     }
 
     &-item {
@@ -30,5 +28,6 @@
     &-btn {
         border: 1px solid map-get($colors, "primary");
         padding: 0.5rem;
+        color: map-get($colors, "primary");
     }
 }

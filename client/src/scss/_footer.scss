@@ -1,0 +1,44 @@
+.footer {
+    background-color: map-get($colors, "footer-bg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    color: map-get($colors, "text-main" );
+    gap: 3rem;
+
+    h4[sub-head] {
+        color: map-get($colors, "text-second" );
+        margin-bottom: 0.5rem;
+    }
+
+    a {
+        color: map-get($colors, "text-main" );
+        font-size: 16px;
+
+        &:hover {
+            display: inline-block;
+            color: map-get($colors, "primary" );
+            transform: scale(1.1, 1.1);
+        }
+    }
+
+    img {
+        width: 40%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    li[head] {
+        font-size: 18px;
+        margin-bottom: 1rem;
+        color: map-get($colors, "text-second" );
+    }
+
+}
